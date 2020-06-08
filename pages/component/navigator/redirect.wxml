@@ -1,0 +1,21 @@
+
+<view class="container">
+  <view class="body body-space">
+  
+    <view class="page-section">
+        <view class="page-section-title">当前页</view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<!--
+
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: '当前页'}}"/>
+</view>
+-->

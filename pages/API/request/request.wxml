@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="body">
+    <view class="page-section-title page-section-title-space">
+        点击向服务器发起请求
+    </view>
+    <view class="btn-area">
+      <button bindtap="makeRequest" type="primary" disabled="{{buttonDisabled}}">request</button>
+      <button bindtap="abortRequest" type="primary" disabled="{{buttonDisabled}}">abort</button>
+    </view>
+  </view>
+</view>

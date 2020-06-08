@@ -1,0 +1,13 @@
+
+<view class="container">
+  <view class="body">
+    <text class="text-space">剩余录音时间 {{ cd }}ms</text>
+    <view class="btn-area">
+        <button bindtap="start" wx:if="{{ !isRecording && !isPaused }}">start</button>
+        <button bindtap="pauseorresume" wx:if="{{ isRecording || isPaused }}">{{ isPaused ? 'resume' : 'pause' }}</button>
+        <button bindtap="stop" wx:if="{{ isRecording || isPaused }}">stop</button>
+        <button bindtap="play" wx:if="{{recordFilePath}}">play</button>
+    </view>
+  </view>
+
+</view>

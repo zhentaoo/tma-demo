@@ -1,0 +1,6 @@
+<template name="header">
+    <view class="header">
+        <view class="head-title">{{title}}</view>
+        <view class="head-desc" wx:if="{{desc}}">{{desc}}</view>
+    </view>
+</template>

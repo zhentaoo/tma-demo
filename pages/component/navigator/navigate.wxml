@@ -1,0 +1,20 @@
+
+<view class="container">
+  <view class="body body-space">
+  
+    <view class="page-section">
+        <view class="page-section-title">新建的页面</view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<!--
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: '新建的页面'}}"/>
+</view>
+-->

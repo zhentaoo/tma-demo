@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="body">
+    <view class="page-section">
+      <view>
+        这里要放一个文件展示的图片
+      </view>
+			<view class="btn-area">
+					<button type="primary" disabled="{{hasFile}}" bindtap="saveFile">保存网络文件</button>
+					<!-- <button type="primary" disabled="{{!hasFile}}" bindtap="openFile">打开文件</button> -->
+					<button type="primary" disabled="{{!hasFile}}" bindtap="getFileInfo">获取文件信息</button>
+					<button type="primary" disabled="{{!hasFile}}" bindtap="getSavedFileList">获取已保存文件列表信息</button>
+					<!-- <button type="primary" disabled="{{!hasFile}}" bindtap="getLocalfileInfo">获取本地文件的文件信息</button> -->
+					<button type="primary" disabled="{{!hasFile}}" bindtap="deleteFile">删除已保存文件</button>
+			</view>
+    </view>
+  </view>
+</view>

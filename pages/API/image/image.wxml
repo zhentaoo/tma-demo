@@ -1,0 +1,61 @@
+<view class="container">
+  <view class="page-section-title page-section-title-space">测试 chooseImage 和 previewImage</view>
+  <view class="body">
+    <form>
+      <view class="page-section">
+
+        <view class="ttui-cells">
+          <view class="ttui-cell">
+            <view class="ttui-cell__hd">
+              <view class="ttui-label">图片来源</view>
+            </view>
+            <view class="ttui-cell__bd">
+              <picker range="{{sourceType}}" bindchange="sourceTypeChange" value="{{sourceTypeIndex}}" mode="selector">
+                <view class="ttui-input">{{sourceType[sourceTypeIndex]}}</view>
+              </picker>
+            </view>
+          </view>
+          <view class="ttui-cell">
+            <view class="ttui-cell__hd">
+              <view class="ttui-label">数量限制</view>
+            </view>
+            <view class="ttui-cell__bd">
+              <picker range="{{count}}" bindchange="countChange" value="{{countIndex}}" mode="selector">
+                <view class="ttui-input">{{count[countIndex]}}</view>
+              </picker>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{sourceTypeIndex != 1}}">
+          此时数量限制不生效
+        </view>
+        <view class="ttui-cells choose-image">
+          <view class="ttui-cell ttui-cell-image">
+            <view class="ttui-cell__bd">
+              <view class="ttui-uploader">
+                <view class="ttui-uploader__hd">
+                  <view class="ttui-uploader__title">点击可预览选好的图片</view>
+                  <view class="ttui-uploader__info">{{imageList.length}}/{{count[countIndex]}}</view>
+                </view>
+                <view class="ttui-uploader__bd">
+                  <view class="ttui-uploader__files">
+                    <block wx:for="{{imageList}}" wx:for-item="image">
+                      <view class="ttui-uploader__file">
+                        <image class="ttui-uploader__img" src="{{image}}" data-src="{{image}}" mode="aspectFill" bindtap="previewImage"></image>
+                      </view>
+                    </block>
+                  </view>
+                  <view class="ttui-uploader__input-box">
+                    <view class="ttui-uploader__input" bindtap="chooseImage"></view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </form>
+    <button type="default" size="default" class="image-action" bindtap="getImageInfo"> 获取待上传的图片信息 </button>
+    <button type="default" size="default" class="image-action" bindtap="saveImageToAlbum"> 保存图片到相册 </button>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+.canvas-space {
+  display: flex;
+  justify-content: center;
+}
+
+.canvas {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+}

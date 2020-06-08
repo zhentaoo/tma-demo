@@ -1,0 +1,3 @@
+<template name="tabbar-setting">
+  <tabbar-setting bind:unmount="switchBack"></tabbar-setting>
+</template>
